@@ -2,10 +2,17 @@
 #include "list.h"
 #include "queue.h"
 #include "stack.h"
+#include "list.cpp"
+#include "queue.cpp"
+#include "stack.cpp"
+#include "linked_list.h"
+#include "linked_list.cpp"
+#include "node.h"
 #include <iostream>
 
 // TODO: T 타입을 적절한 타입으로 변경
-void print(T &list) { list.print(); }
+//void print(T &list) { list.print(); }
+void print(LinkedList &list) { list.print(); }
 
 void testQueue() {
   Queue queue;
@@ -27,13 +34,13 @@ void testQueue() {
 
 void testStack() {
   Stack stack;
-
+  
   for (int i = 0; i < 10; i++)
     stack.push(i);
 
   for (int i = 100; i > 90; i--)
     stack += i;
-
+    
   std::cout << stack.peek() << std::endl;
   print(stack);
 
